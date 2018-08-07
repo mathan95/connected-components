@@ -10,7 +10,7 @@ from matplotlib import pyplot as plt
 import matplotlib.image as mpimg
 import cv2
 
-img=mpimg.imread("3.jpg")
+img=mpimg.imread("7.jpg")
 A=img/255
 ish=A.shape
 X=np.reshape(A,(ish[0]*ish[1],ish[2]))
@@ -35,10 +35,20 @@ plt.subplot(1,2,2),plt.imshow(mpimg.imread('2.jpg'))
 '''
 
 X_out=np.uint8(X_out*255)
+#
+img2=cv2.cvtColor(X_out,cv2.COLOR_BGR2GRAY)
+#
+#
+#
+ret, thresh = cv2.threshold(img2,0,1,cv2.THRESH_BINARY)
+#
+kernel = np.ones((10,10), np.uint8)
+#
+#
+thresh = cv2.dilate(thresh, kernel, iterations=2)
+thresh=cv2.erode(thresh,kernel,iterations=3)
 
-img2=cv2.cvtColor(X_out,cv2.COLOR_RGB2GRAY)
 
-ret, thresh = cv2.threshold(img2,0,255,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
 # You need to choose 4 or 8 for connectivity type
 connectivity = 4  
 # Perform the operation
