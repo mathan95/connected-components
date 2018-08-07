@@ -15,3 +15,14 @@ I used this for-
       pixels in them less than a threshold.
       
       Also uses it to localize the necessary parts that had to processed as the last stage of the preprocessing for my project.
+      
+      
+The files in the repository-
+
+      k_means.py-  This file include the code for doing the green removal and then to seperate each connected components in the resulting image       
+                   with number of pixels in them more than athreshold and each of them are displayed separately.
+      
+      k_means_with_connected_components2.py- This file include the code for green removal using k-cluster and then to separate each each        
+                                             connected components in the resulting image with number of pixels in them more than athreshold 
+                                             and each of them are displayed separately.
+      
