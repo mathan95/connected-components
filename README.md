@@ -1,7 +1,7 @@
 # connected-components
 
-This too done as a part of the project pf pest detection. The connected component inbuilt fuction in openCV is used here to
-find the components with higher number of pixels with them.
+This too done as a part of the project pest detection. The connected component inbuilt fuction in openCV is used here and I have made use of
+it's outputs to complete some important tasks in my project.
 
 A grayscale image is processed by this algorithm. The algorithm group the pixels to different components by using a 4-connectivity analysis and
 then labels are obtained for each pixels representing their component number. This labels then used by me to find and remove un wanted noises and
